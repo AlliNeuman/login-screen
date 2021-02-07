@@ -1,19 +1,16 @@
 import React from "react";
-import Login from "./Login.jsx";
+import Form from "./Form.jsx";
 
-var isLoggedIn = true;
+var isLoggedIn = false;
+var userIsRegistered = false;
 
 const currentTime = new Date().getHours();
 
 function App() {
   return (
     <div className="container">{
-
-    isLoggedIn ? <h1>Hello</h1> : <Login />
-    /* render only when left hand side is true */
-    /* currentTime > 12 && <h1>Why are you still working? </h1> */
+        isLoggedIn ? <h1>Hello!</h1> : <Form isRegistered={userIsRegistered} />
     }
-        
     </div>
   );
 }
